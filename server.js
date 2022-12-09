@@ -1,5 +1,6 @@
 const express=require("express")
 const app=express()
+const port=process.env.PORT || 3030;
 const {Server}=require("socket.io")
 const http=require("http")
 const httpServer=http.createServer(app)
@@ -40,4 +41,4 @@ io.on("connection",(socket)=>{
 
 
 
-httpServer.listen(3030,()=>console.log('server is started'))
+httpServer.listen(port,()=>console.log(`server is started with port ${port}`))
