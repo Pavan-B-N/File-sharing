@@ -16,7 +16,7 @@ app.get("/",(req,res)=>{
 
 const io=new Server(httpServer,{
     cors:{
-        origin:["http://localhost:3000"]
+        origin:["http://localhost:3000","https://fileshareapp.netlify.app/"]
     }
 })
 
